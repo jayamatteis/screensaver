@@ -49,6 +49,7 @@ body{
   margin: 250px auto;
   transition: all 5s ease, background 5s ease;
   z-index: 0;
+  animation: pulse .3s infinite;
 }
 
 .object:hover{
@@ -66,8 +67,8 @@ body{
     background-color: black;
     border-radius: 50%;
     top: 0;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     animation: zoom 5s infinite linear;
     position: absolute;
     z-index: 11;
@@ -78,8 +79,8 @@ body{
     background-color: black;
     border-radius: 50%;
     bottom: 0;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     animation: zoom 5s infinite linear;
     position: absolute;
     z-index: 11;
@@ -88,9 +89,9 @@ body{
 .zoomer3 {
     background-color: black;
     border-radius: 50%;
-    top: 50px;
-    width: 50px;
-    height: 50px;
+    top: 100px;
+    width: 100px;
+    height: 100px;
     animation: zoom 5s infinite reverse linear;
     position: absolute;
     z-index: 11;
@@ -100,9 +101,9 @@ body{
 .zoomer4 {
     background-color: black;
     border-radius: 50%;
-    bottom: 50px;
-    width: 50px;
-    height: 50px;
+    bottom: 100px;
+    width: 100px;
+    height: 100px;
     animation: zoom 5s infinite reverse linear;
     position: absolute;
     z-index: 11;
@@ -111,9 +112,9 @@ body{
 .zoomer5 {
     background-color: black;
     border-radius: 50%;
-    top: 100px;
-    width: 50px;
-    height: 50px;
+    top: 200px;
+    width: 100px;
+    height: 100px;
     animation: zoom 5s infinite linear;
     position: absolute;
     z-index: 11;
@@ -122,9 +123,42 @@ body{
 .zoomer6 {
     background-color: black;
     border-radius: 50%;
-    bottom: 100px;
-    width: 50px;
-    height: 50px;
+    bottom: 200px;
+    width: 100px;
+    height: 100px;
+    animation: zoom 5s infinite linear;
+    position: absolute;
+    z-index: 11;
+}
+
+.zoomer7 {
+    background-color: black;
+    border-radius: 50%;
+    bottom: 330px;
+    width: 100px;
+    height: 100px;
+    animation: zoom 5s infinite linear reverse;
+    position: absolute;
+    z-index: 11;
+}
+
+.zoomer8 {
+    background-color: black;
+    border-radius: 50%;
+    top: 330px;
+    width: 100px;
+    height: 100px;
+    animation: zoom 5s infinite linear reverse;
+    position: absolute;
+    z-index: 11;
+}
+
+.zoomerbig {
+    background-color: black;
+    border-radius: 50%;
+    top: 430px;
+    width: 100px;
+    height: 100px;
     animation: zoom 5s infinite linear;
     position: absolute;
     z-index: 11;
@@ -137,7 +171,7 @@ body{
     height: 200px;
     margin-top: 30px;
     margin: 20px auto;
-    animation: spin .3s infinite linear;
+    animation: spin .2s infinite linear, tricolor .3s infinite;
     border-left: 25px solid transparent;
 	  border-right: 25px solid transparent;
 	  border-bottom: 50px solid;
@@ -150,12 +184,26 @@ body{
     width: 200px;
     height: 200px;
     margin: 20px auto;
-    animation: spin .3s infinite linear;
+    animation: spin .2s infinite linear, tricolor .3s infinite;
     border-left: 25px solid transparent;
 	  border-right: 25px solid transparent;
 	  border-bottom: 50px solid;
     z-index: -5;
     position: relative;
+}
+
+@keyframes tricolor {
+  0%  {color: lightblue;}
+ 10%  {color: purple;}
+ 20%  {color: pink;}
+ 30%  {color: red;}
+ 40%  {color: orange}
+ 50%  {color: yellow;}
+ 60%  {color: lightgreen;}
+ 70%  {color: green;}
+ 80%  {color: turquoise;}
+ 90%  {color: blue;}
+ 100% {color: lightblue;}
 }
 
 @keyframes zoom {
