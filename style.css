@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin: auto;
+  background-color: black;
+  color: white;
+
+}
+
+img{
+  max-width: 100%;
+}
+
+p{
+  margin:40px;
+  font-family: 'Zilla Slab', serif;
+  font-size: 60px;
+  font-style: italic;
+}
+
+@keyframes pulse {
+  0%  {background-color: lightblue;}
+ 10% ; {background-color: purple;}
+ 20%  {background-color: pink;}
+ 30%  {background-color: red;}
+ 40%  {background-color: orange}
+ 50%  {background-color: yellow;}
+ 60%  {background-color: lightgreen;}
+ 70%  {background-color: green;}
+ 80%  {background-color: turquoise;}
+ 90%  {background-color: blue;}
+ 100% {background-color: lightblue;}
+}
+
+body{
+  margin: auto;
+  background-color: black;
+  color: white;
+}
+
+.object{
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+  margin: 250px auto;
+  transition: all 5s ease, background 5s ease;
+  z-index: 0;
+}
+
+.object:hover{
+  border-radius: 50%;
+  width: 800px;
+  height: 800px;
+  transform: scale(2);
+  margin: 10px auto;
+  display: block;
+  animation: pulse 5s infinite;
+  z-index: 0;
+}
+
+.zoomer {
+    background-color: black;
+    border-radius: 50%;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    animation: zoom 5s infinite linear;
+    position: absolute;
+    z-index: 11;
+    float: left;
+}
+
+.zoomer2 {
+    background-color: black;
+    border-radius: 50%;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    animation: zoom 5s infinite linear;
+    position: absolute;
+    z-index: 11;
+}
+
+.zoomer3 {
+    background-color: black;
+    border-radius: 50%;
+    top: 50px;
+    width: 50px;
+    height: 50px;
+    animation: zoom 5s infinite reverse linear;
+    position: absolute;
+    z-index: 11;
+    float: right;
+}
+
+.zoomer4 {
+    background-color: black;
+    border-radius: 50%;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    animation: zoom 5s infinite reverse linear;
+    position: absolute;
+    z-index: 11;
+}
+
+.zoomer5 {
+    background-color: black;
+    border-radius: 50%;
+    top: 100px;
+    width: 50px;
+    height: 50px;
+    animation: zoom 5s infinite linear;
+    position: absolute;
+    z-index: 11;
+}
+
+.zoomer6 {
+    background-color: black;
+    border-radius: 50%;
+    bottom: 100px;
+    width: 50px;
+    height: 50px;
+    animation: zoom 5s infinite linear;
+    position: absolute;
+    z-index: 11;
+}
+
+.triangle{
+    background-color: black;
+    color: rgb(227, 103, 242);
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+    margin: 20px auto;
+    animation: spin .3s infinite linear;
+    border-left: 25px solid transparent;
+	  border-right: 25px solid transparent;
+	  border-bottom: 50px solid;
+    z-index: 0;
+}
+
+.triangle2{
+    background-color: black;
+    color: rgb(227, 103, 242);
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    animation: spin .3s infinite linear;
+    border-left: 25px solid transparent;
+	  border-right: 25px solid transparent;
+	  border-bottom: 50px solid;
+    z-index: -5;
+    position: relative;
+}
+
+@keyframes zoom {
+    0%{transform:translateX(-250px);}
+    50% {transform:translateX(50vw);}
+    100% {transform:translateX(100vw);}
+  }
+
+  @keyframes spin {
+    0% {transform:rotate(0deg); background-color: black;}
+    50% {background-color: black; color: white}
+    100% {transform:rotate(360deg); background-color: black;}
+  }
